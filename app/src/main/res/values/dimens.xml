@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standardheight">110dp</dimen>
+    <dimen name="standardmargin">20dp</dimen>
+    <dimen name="standardfontsize">24sp</dimen>
+</resources>

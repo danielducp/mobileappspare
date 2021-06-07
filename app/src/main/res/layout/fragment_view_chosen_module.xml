@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ViewChosenModuleFragment">
+
+        <TextView
+            android:id="@+id/moduleNameChosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/arapey"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            android:padding="@dimen/standardmargin"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/assignmentsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standardheight"
+                    android:layout_margin="@dimen/standardmargin"
+                    android:background="@drawable/normalbutton"
+                    android:drawableRight="@drawable/ic_baseline_assignment_24"
+                    android:text="Assignments"
+
+                    android:textColor="@color/primaryTextColor"
+                    android:fontFamily="@font/arapey"
+                    android:padding="@dimen/standardmargin"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/standardfontsize"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/booksButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standardheight"
+                    android:layout_margin="@dimen/standardmargin"
+                    android:background="@drawable/normalbutton"
+                    android:drawableRight="@drawable/ic_baseline_library_books_24"
+                    android:text="View available Books"
+
+                    android:textColor="@color/primaryTextColor"
+                    android:fontFamily="@font/arapey"
+                    android:padding="@dimen/standardmargin"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/standardfontsize"
+                    android:textStyle="bold" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/currentBooksButtton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standardheight"
+                    android:layout_margin="@dimen/standardmargin"
+                    android:background="@drawable/normalbutton"
+                    android:drawableRight="@drawable/ic_baseline_book_24"
+                    android:text="View my chosen books"
+
+                    android:textColor="@color/primaryTextColor"
+                    android:fontFamily="@font/arapey"
+                    android:padding="@dimen/standardmargin"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/standardfontsize"
+                    android:textStyle="bold"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/notesButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standardheight"
+                    android:layout_margin="@dimen/standardmargin"
+                    android:background="@drawable/normalbutton"
+                    android:drawableRight="@drawable/ic_baseline_notes_24"
+
+                    android:text="Notes"
+                    android:textColor="@color/primaryTextColor"
+                    android:fontFamily="@font/arapey"
+                    android:padding="@dimen/standardmargin"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/standardfontsize"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/deletebutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standardheight"
+                    android:layout_margin="@dimen/standardmargin"
+                    android:background="@drawable/deletebutton"
+                    android:drawableRight="@drawable/ic_baseline_delete_24"
+                    android:fontFamily="@font/arapey"
+                    android:padding="@dimen/standardmargin"
+                    android:text="Delete Module"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/standardfontsize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

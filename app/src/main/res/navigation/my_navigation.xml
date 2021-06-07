@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/startPageFragment">
+    <fragment
+        android:id="@+id/startPageFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.StartPageFragment"
+        android:label="Start Page"
+        tools:layout="@layout/fragment_start_page" >
+                <action
+
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_startPageFragment_to_moduleTypeChooseFragment"
+            app:destination="@id/moduleTypeChooseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moduleTypeChooseFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.ModuleTypeChooseFragment"
+        android:label="Choose Module Type"
+        tools:layout="@layout/fragment_module_type_choose" >
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_moduleTypeChooseFragment_to_addModuleTypeFragment"
+            app:destination="@id/addModuleTypeFragment" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_moduleTypeChooseFragment_to_modulesChosenFragment"
+            app:destination="@id/modulesChosenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addModuleTypeFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.modulecategory.AddModuleTypeFragment"
+        android:label="Add Module Type"
+        tools:layout="@layout/fragment_add_module_type" >
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_addModuleTypeFragment_to_moduleTypeChooseFragment"
+            app:destination="@id/moduleTypeChooseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modulesChosenFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.ModulesChosenFragment"
+        android:label="Module Type Chosen"
+        tools:layout="@layout/fragment_modules_chosen" >
+        <argument
+            android:name="currentModuleType"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduletypedatabase.ModuleType" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_modulesChosenFragment_to_addModuleFragment"
+            app:destination="@id/addModuleFragment" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_modulesChosenFragment_to_viewChosenModuleFragment"
+            app:destination="@id/viewChosenModuleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addModuleFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.module.AddModuleFragment"
+        android:label="Add a Module"
+        tools:layout="@layout/fragment_add_module" >
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_addModuleFragment_to_modulesChosenFragment"
+            app:destination="@id/modulesChosenFragment" />
+        <argument
+            android:name="currentModuleType"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduletypedatabase.ModuleType" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewChosenModuleFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.ViewChosenModuleFragment"
+        android:label="View Chosen Module"
+        tools:layout="@layout/fragment_view_chosen_module" >
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduledatabase.Module" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_viewChosenModuleFragment_to_assignmentFromModuleFragment"
+            app:destination="@id/assignmentFromModuleFragment" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_viewChosenModuleFragment_to_notesFromModuleFragment"
+            app:destination="@id/notesFromModuleFragment" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_viewChosenModuleFragment_to_apiFragment"
+            app:destination="@id/apiFragment" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_viewChosenModuleFragment_to_viewChosenBooksFragment"
+            app:destination="@id/viewChosenBooksFragment" />
+        <action
+            android:id="@+id/action_viewChosenModuleFragment_to_modulesChosenFragment"
+            app:destination="@id/modulesChosenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignmentFromModuleFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.AssignmentFromModuleFragment"
+        android:label="Assignments for your Module"
+        tools:layout="@layout/fragment_assignments_from_module" >
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_assignmentFromModuleFragment_to_addAssignmentFragment"
+            app:destination="@id/addAssignmentFragment" />
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduledatabase.Module" />
+        <action
+            android:id="@+id/action_assignmentFromModuleFragment_to_chosenAssignmentFragment"
+            app:destination="@id/chosenAssignmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesFromModuleFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.NotesFromModuleFragment"
+        android:label="Notes for your Module"
+        tools:layout="@layout/fragment_notes_from_module" >
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_notesFromModuleFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduledatabase.Module" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_notesFromModuleFragment_to_chosenNoteFragment"
+            app:destination="@id/chosenNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAssignmentFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.assignments.AddAssignmentFragment"
+        android:label="Add an Assignment"
+        tools:layout="@layout/fragment_add_assignment" >
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_addAssignmentFragment_to_assignmentFromModuleFragment"
+            app:destination="@id/assignmentFromModuleFragment" />
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduledatabase.Module" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.note.AddNoteFragment"
+        android:label="Add a Note"
+        tools:layout="@layout/fragment_add_note" >
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduledatabase.Module" />
+    </fragment>
+    <fragment
+        android:id="@+id/chosenNoteFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.ChosenNoteFragment"
+        android:label="Chosen Note"
+        tools:layout="@layout/fragment_chosen_note" >
+        <argument android:name="currentNote"
+            app:argType="com.sid1817733.sid1817733finalassignment.notedatabase.Note" />
+    </fragment>
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.APIFragment"
+        android:label="View available Books" >
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduledatabase.Module" />
+                <action
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            android:id="@+id/action_apiFragment_to_chosenBookFragment2"
+            app:destination="@id/chosenBookFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewChosenBooksFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.ViewChosenBooksFragment"
+        android:label="View my Chosen Books"
+        tools:layout="@layout/fragment_view_chosen_books" >
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduledatabase.Module" />
+    </fragment>
+    <fragment
+        android:id="@+id/chosenBookFragment2"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.ChosenBookFragment"
+        android:label="Add Chosen Book" >
+        <argument
+            android:name="currentModule"
+            app:argType="com.sid1817733.sid1817733finalassignment.moduledatabase.Module" />
+    </fragment>
+    <fragment
+        android:id="@+id/chosenAssignmentFragment"
+        android:name="com.sid1817733.sid1817733finalassignment.fragments.ChosenAssignmentFragment"
+        android:label="Chosen Assignment" >
+        <argument
+            android:name="currentAssignment"
+            app:argType="com.sid1817733.sid1817733finalassignment.assignmentdatabase.Assignment" />
+    </fragment>
+</navigation>

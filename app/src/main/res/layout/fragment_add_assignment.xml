@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".assignments.AddAssignmentFragment">
+
+        <TextView
+            android:id="@+id/moduleNameChosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/arapey"
+            android:padding="@dimen/standardmargin"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            />
+
+
+
+        <EditText
+            android:id="@+id/addModuleName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/arapey"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            android:hint="@string/enter_assignment_hint"
+            app:layout_constraintBottom_toTopOf="@+id/addButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.277" />
+
+        <EditText
+            android:id="@+id/assignmentInformation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/arapey"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            android:hint="@string/enter_assignment_information_hint"
+            app:layout_constraintBottom_toTopOf="@+id/addButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.638" />
+
+        <EditText
+            android:id="@+id/moduleNameBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/arapey"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            android:hint="@string/enter_module_hint"
+            app:layout_constraintBottom_toTopOf="@+id/addButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.891" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standardheight"
+            android:layout_margin="@dimen/standardmargin"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/normalbutton"
+            android:drawableRight="@drawable/ic_baseline_save_24"
+            android:text="@string/add_assignment_label"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

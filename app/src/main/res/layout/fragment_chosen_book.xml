@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ChosenBookFragment">
+
+        <EditText
+            android:id="@+id/moduleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_module_hint"
+            app:layout_constraintBottom_toTopOf="@+id/bookName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/arapey"
+            android:padding="@dimen/standardmargin"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/bookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_book_hint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/arapey"
+            android:padding="@dimen/standardmargin"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standardheight"
+            android:layout_margin="@dimen/standardmargin"
+            android:background="@drawable/normalbutton"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            android:text="@string/add_book_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookName"
+            android:drawableRight="@drawable/ic_baseline_save_24"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

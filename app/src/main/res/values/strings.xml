@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SID1817733 Final Assignment</string>
+    <string name="add_module">Add Module</string>
+    <string name="past_module_label">Past Modules</string>
+    <string name="current_module_label">Current Modules</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_book_hint">Enter Book Name</string>
+    <string name="module_name">Module Name</string>
+    <string name="enter_module_type_hint">Enter Module Type Name</string>
+    <string name="enter_module_hint">Enter Module Name</string>
+    <string name="enter_assignment_hint">Enter Assignment Name</string>
+    <string name="enter_note_hint">Enter Note Name</string>
+    <string name="enter_assignment_information_hint">Enter Assignment Information</string>
+    <string name="enter_note_information_hint">Enter Note Information</string>
+    <string name="add_book_label">Add Book</string>
+    <string name="add_module_label">Add Module Name</string>
+    <string name="add_assignment_label">Add Assignment</string>
+    <string name="add_note_label">Add Note</string>
+    <string name="take_photo_label">Take a photo</string>
+    <string name="add_module_type_label">Add Module Type</string>
+</resources>

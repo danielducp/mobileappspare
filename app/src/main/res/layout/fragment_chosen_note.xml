@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ChosenNoteFragment">
+
+        <TextView
+            android:id="@+id/noteNameChosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arapey"
+            android:padding="@dimen/standardmargin"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.164" />
+
+        <TextView
+            android:id="@+id/noteInformationChosen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arapey"
+            android:padding="@dimen/standardmargin"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageofNote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteNameChosen" />
+
+        <ImageView
+            android:id="@+id/imageofNote"
+            android:layout_width="297dp"
+            android:layout_height="264dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteNameChosen"
+            app:layout_constraintVertical_bias="0.381"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteNoteButton"
+            android:background="@drawable/deletebutton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standardheight"
+            android:layout_margin="@dimen/standardmargin"
+            android:text="Delete Note"
+            android:fontFamily="@font/arapey"
+            android:padding="@dimen/standardmargin"
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageofNote" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

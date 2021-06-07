@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.ModulesChosenFragment">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/modulerecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="40dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/deletemoduletypebutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standardheight"
+                    android:layout_margin="@dimen/standardmargin"
+                    android:background="@drawable/deletebutton"
+                    android:fontFamily="@font/arapey"
+                    android:padding="@dimen/standardmargin"
+                    android:text="Delete Module Type"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/standardfontsize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/viewModuleTypeChosenName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/arapey"
+            android:padding="@dimen/standardmargin"
+            android:textAlignment="center"
+            android:textSize="@dimen/standardfontsize"
+            android:textStyle="bold"  />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonforModules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/design_default_color_error"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_add_24"
+            android:tint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

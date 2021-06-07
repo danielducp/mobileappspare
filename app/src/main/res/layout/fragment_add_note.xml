@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".note.AddNoteFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/moduleNameChosen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arapey"
+                android:padding="@dimen/standardmargin"
+                android:textAlignment="center"
+                android:textSize="@dimen/standardfontsize"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_above="@+id/button"
+                android:layout_alignParentTop="true" />
+
+            <EditText
+                android:id="@+id/addNoteName"
+                android:layout_width="match_parent"
+                android:layout_height="79dp"
+                android:fontFamily="@font/arapey"
+                android:hint="@string/enter_note_hint"
+                android:textAlignment="center"
+                android:textSize="@dimen/standardfontsize"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cameraButton"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/standardmargin"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/normalbutton"
+                android:drawableRight="@drawable/ic_baseline_camera_alt_24"
+
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/standardfontsize"
+                android:textStyle="bold"
+                android:text="@string/take_photo_label"
+            />
+
+            <EditText
+                android:id="@+id/noteInformation"
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:fontFamily="@font/arapey"
+                android:hint="@string/enter_note_information_hint"
+                android:textAlignment="center"
+                android:textSize="@dimen/standardfontsize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/moduleNameBox"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/arapey"
+                android:textAlignment="center"
+                android:textSize="@dimen/standardfontsize"
+                android:textStyle="bold"
+                android:hint="@string/enter_module_hint"
+        />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/standardheight"
+                android:layout_margin="@dimen/standardmargin"
+                android:layout_marginBottom="156dp"
+                android:background="@drawable/normalbutton"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/standardfontsize"
+                android:textStyle="bold"
+                android:drawableRight="@drawable/ic_baseline_save_24"
+
+                android:text="@string/add_note_label"
+          />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
